@@ -6,7 +6,7 @@ permalink: /
 <div style="display: flex; justify-content: space-between; align-items: flex-start;">
     <div align="left">
         <span style="font-weight: 700; font-size: 30px;">Renfei (Chris) Wu</span><br/>
-        <span style="font-size: 15px;">UG Student in CS & Applied Math/span><br/>
+        <span style="font-size: 15px;">UG Student in CS & Applied Math</span><br/>
         <span style="font-size: 15px;">Email: chrisren[dot]wu[at]utm[dot]toronto[dot]edu</span><br/>
         <span style="font-size: 15px;">
             <a href="https://github.com/{{ site.footer-links.github }}" target="_blank">Github</a>
