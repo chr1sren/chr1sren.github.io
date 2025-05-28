@@ -1,29 +1,28 @@
 ---
 layout: page
-title: About
-permalink: /about/
+permalink: /
 ---
 
-[Reverie](https://github.com/amitmerchant1990/reverie) is a Jekyll theme which is simple and opinionated. It's actually a fork of [jekyll-now](https://github.com/barryclark/jekyll-now) with some additional features and personal touches which I've implemented to suit my needs for [my blog](https://www.amitmerchant.com).
+<div style="display: flex; justify-content: space-between; align-items: flex-start;">
+    <div align="left">
+        <span style="font-weight: 700; font-size: 30px;">Renfei (Chris) Wu</span><br/>
+        <span style="font-size: 15px;">UG Student in CS & Applied Math/span><br/>
+        <span style="font-size: 15px;">Address: 55 St George St, Toronto, ON, Canada</span><br/>
+        <span style="font-size: 15px;">Email: firstnamelastname[at]cs[dot]toronto[dot]edu</span><br/>
+        <span style="font-size: 15px;">
+            <a href="https://github.com/{{ site.footer-links.github }}" target="_blank">Github/</a>
+            <a href="http://livreq.github.io/images/profile/cv.pdf">CV]</a>
+        </span><br/>
+    </div>
+   <div><img src="images/profile/me.jpg" align="right" height="160px"/></div>
+</div>
 
-This is a plug-and-play Jekyll theme which you can use on GitHub Pages without even setting up a local environment.
 
-## Features
 
-- Command-line free fork-first workflow, using GitHub.com to create, customize and post to your blog
-- Fully responsive and mobile optimized base theme
-- Sass/Coffeescript support using Jekyll 2.0
-- Free hosting on your GitHub Pages user site
-- All the SEO goodies comes in-built
-- Markdown blogging
-- Syntax highlighting using Pygments
-    - [Dracula syntax theme](https://draculatheme.com/) included
-- Disqus commenting
-- Google Analytics integration
-- Fuzzy search across blog posts
-- Pagination of posts works out-of-the-box.
-- Categorize posts out-of-the box
-- RSS Feed
-- In-built sitemap
 
-Learn more about it [here](https://github.com/amitmerchant1990/reverie) on how to get started.
+## About me
+<!--- ![profile](images/profile/me.jpg) -->
+I'm currently an undergraduate student majoring in Computer Science and Applied Mathematics at the University of Toronto Mississauga.
+
+I'm passionate about Computer Vision and Robotics, and especially excited by using mathematical tools to model the real world and solve complex problems.
+
