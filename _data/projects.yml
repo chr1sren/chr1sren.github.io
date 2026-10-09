@@ -1,0 +1,16 @@
+# Projects shown on the homepage, in order.
+#
+# - title: Project name
+#   url: https://...                      # optional, makes the title a link
+#   image: /assets/img/projects/x.jpg     # optional, 4:3 thumbnail
+#   meta: Supervised by [Prof. Name](https://...), Some Lab   # Markdown links work here
+#   duration: April – August 2026
+#   links:                                # optional, shown after meta
+#     - name: code
+#       url: https://github.com/...
+#   description: One or two sentences.
+
+- title: Learning Invariant Representations Using Bisimulation with Actions for Efficient Reinforcement Learning
+  meta: Supervised by [Dr. Amey Pore](https://ameyapores.github.io/), MEDCVR Lab
+  duration: April – August 2026
+  description: Reinforcement Learning, State Representation Learning

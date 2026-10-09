@@ -1,0 +1,145 @@
+/* Colors are light-dark(light, dark). The theme follows the system setting
+   unless the toggle has set data-theme on <html>. */
+
+:root {
+  color-scheme: light dark;
+  --bg: light-dark(#ffffff, #15181b);
+  --fg: light-dark(#22262a, #e3e6e9);
+  --muted: light-dark(#6b7279, #98a0a8);
+  --line: light-dark(#e6e8eb, #2a2f34);
+  --accent: light-dark(#1f6f78, #6cc3cc);
+  --serif: "Source Serif 4", Georgia, serif;
+  --sans: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+}
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"] { color-scheme: dark; }
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.6 var(--sans);
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.wrap { max-width: 980px; margin: 0 auto; padding-inline: 24px; }
+
+/* Top bar */
+
+.top { border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; justify-content: flex-end; padding-block: 14px; }
+.top nav { display: flex; align-items: center; gap: 22px; font-size: 15px; }
+.top nav a { color: var(--muted); }
+.top nav a[aria-current="page"] { color: var(--accent); font-weight: 600; }
+.theme-toggle { display: grid; padding: 4px; margin: -4px; border: 0; background: none; color: var(--muted); cursor: pointer; }
+.theme-toggle:hover { color: var(--fg); }
+
+/* Section headings: small caps label with a rule running to the right */
+
+.content h2,
+.gallery-head h1 {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 14px;
+  font: 600 13px var(--sans);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.content h2::after,
+.gallery-head h1::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+/* About page */
+
+.about { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 48px; padding-block: 40px 64px; }
+
+.profile { display: grid; gap: 2px; align-content: start; font-size: 15px; color: var(--muted); }
+.profile img { width: 160px; height: 160px; border-radius: 8px; object-fit: cover; margin-bottom: 12px; }
+.profile .name { font: 600 20px/1.3 var(--serif); color: var(--fg); }
+.profile ul { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 4px; }
+
+.content section + section { margin-top: 36px; }
+.content p { margin: 0 0 12px; }
+.content section > p { text-wrap: pretty; } /* avoids a last line with only a word or two */
+
+.project { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 20px; padding-block: 14px; }
+.project .thumb { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 4px; background: var(--line); }
+.project h3 { margin: 0; font-size: 16px; font-weight: 600; line-height: 1.4; }
+.project .meta { font-size: 14px; color: var(--muted); }
+.project p { margin: 6px 0 0; font-size: 15px; }
+
+/* Gallery: justified rows. Each photo's width grows in proportion to its
+   aspect ratio (--r), so every photo in a row ends up the same height. */
+
+.gallery-head { padding-block: 36px 18px; }
+.gallery-head p { margin: 0; color: var(--muted); font-size: 15px; }
+
+.gallery { display: flex; flex-wrap: wrap; gap: 8px; padding-bottom: 64px; }
+.gallery::after { content: ""; flex-grow: 999; } /* keeps the last row from stretching */
+
+.photo { position: relative; flex: var(--r) 1 calc(var(--r) * 210px); margin: 0; overflow: hidden; border-radius: 2px; }
+.photo a { display: block; cursor: zoom-in; }
+.photo img { display: block; width: 100%; height: auto; }
+.photo figcaption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 24px 10px 8px;
+  font-size: 13px;
+  color: #fff;
+  background: linear-gradient(transparent, rgba(0, 0, 0, .45));
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .2s;
+}
+.photo:hover figcaption,
+.photo:focus-within figcaption { opacity: 1; }
+
+.empty { color: var(--muted); padding-bottom: 64px; }
+
+/* Lightbox */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 64px;
+  background: rgba(10, 12, 14, .94);
+}
+.lightbox[hidden] { display: none; }
+.lightbox img { max-width: 100%; max-height: calc(100vh - 120px); object-fit: contain; }
+.lightbox .caption { margin: 14px 0 0; color: #e6e6e6; font-size: 15px; text-align: center; }
+.lightbox .caption span { color: #9a9a9a; }
+.lightbox button { position: absolute; padding: 12px; border: 0; background: none; color: #ddd; font: 28px/1 var(--sans); cursor: pointer; }
+.lightbox .close { top: 12px; right: 12px; }
+.lightbox .prev { left: 8px; top: 50%; transform: translateY(-50%); }
+.lightbox .next { right: 8px; top: 50%; transform: translateY(-50%); }
+
+/* Phones */
+
+@media (max-width: 680px) {
+  .about { grid-template-columns: 1fr; gap: 28px; padding-block: 28px 48px; }
+  .profile { grid-template-columns: 96px 1fr; column-gap: 16px; }
+  .profile img { width: 96px; height: 96px; margin: 0; grid-row: span 4; }
+  .profile ul { grid-column: 2; display: flex; gap: 14px; margin-top: 4px; }
+  .project { grid-template-columns: 100px minmax(0, 1fr); gap: 14px; }
+  .gallery { gap: 4px; }
+  .photo { flex-basis: calc(var(--r) * 120px); }
+  .lightbox { padding: 24px 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .photo figcaption { transition: none; }
+}

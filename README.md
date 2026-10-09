@@ -1,5 +1,5 @@
 ## About
 
-A personal website built with the elegant [Reverie](https://github.com/amitmerchant1990/reverie) Jekyll theme.
+Personal site, built with [Jerkyl](https://jekyllrb.com/) on GitHub Pages.
 
-**License:** [MIT](./LICENSE)
+License: MIT

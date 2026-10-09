@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+<div class="about">
+  <aside class="profile">
+    <img src="{{ '/assets/img/me.jpg' | relative_url }}" alt="{{ site.author.name }}" width="160" height="160">
+    <span class="name">{{ site.author.name }}</span>
+    {% for line in site.author.affiliation %}
+    <span>{{ line }}</span>
+    {% endfor %}
+    <ul>
+      <li><a href="mailto:{{ site.author.email }}">Email</a></li>
+      <li><a href="https://github.com/{{ site.author.github }}">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a></li>
+    </ul>
+  </aside>
+
+  <div class="content">
+    <section>
+      <h2>About</h2>
+      <p>I'm an undergraduate at the University of Toronto studying Computer Science and Applied Mathematics. I am interested in learning-based control for robotics, and in particular in how robots can learn representations of the world that capture what actually matters for control. I hope to build methods that are both principled and practical.</p>
+      <p>Outside of research, I read mathematics textbooks for fun; math has a habit of offering a surprising idea or a deeper understanding when I least expect it. Lately I've been especially drawn to geometry and topology. I also enjoy <a href="{{ '/gallery/' | relative_url }}">backpacking</a>.</p>
+    </section>
+
+    {% if site.data.projects.size > 0 %}
+    <section>
+      <h2>Research Project</h2>
+      {% for project in site.data.projects %}
+      <article class="project">
+        {% if project.image %}
+        <img class="thumb" src="{{ project.image | relative_url }}" alt="" loading="lazy">
+        {% else %}
+        <div class="thumb"></div>
+        {% endif %}
+        <div>
+          <h3>{% if project.url %}<a href="{{ project.url }}">{{ project.title }}</a>{% else %}{{ project.title }}{% endif %}</h3>
+          <div class="meta">
+            <em>{{ project.meta | markdownify | remove: '<p>' | remove: '</p>' | strip }}</em>
+            {% for link in project.links %} · <a href="{{ link.url }}">{{ link.name }}</a>{% endfor %}
+          </div>
+          {% if project.duration %}<div class="meta">{{ project.duration }}</div>{% endif %}
+          <p>{{ project.description }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </section>
+    {% endif %}
+  </div>
+</div>

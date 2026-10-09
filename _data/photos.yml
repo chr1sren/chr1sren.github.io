@@ -1,0 +1,134 @@
+# Gallery photos, in display order. Add entries with tools/add_photos.py,
+# then fill in `place` (shown on hover) and check `date` (shown in the viewer).
+#
+# - file: montreal-01.jpg   # in assets/photos/ and assets/photos/thumb/
+#   width: 2400
+#   height: 1600
+#   place: Montreal, Canada
+#   date: "2025.12"   # keep the quotes, or 2025.10 becomes 2025.1
+
+- file: dsc-0025.jpg
+  width: 2400
+  height: 1600
+  place: My Room, Canada
+  date: "2025.01"
+
+- file: dsc-0451.jpg
+  width: 2400
+  height: 1600
+  place: Beijing, China
+  date: "2025.06"
+
+- file: dsc-1583.jpg
+  width: 2400
+  height: 1600
+  place: Montreal, Canada
+  date: "2025.10"
+
+- file: dsc-1824.jpg
+  width: 2400
+  height: 2400
+  place: Montreal, Canada
+  date: "2025.10"
+
+- file: dsc-2220.jpg
+  width: 1600
+  height: 2400
+  place: Montreal, Canada
+  date: "2025.10"
+
+- file: dsc-2525.jpg
+  width: 2400
+  height: 2400
+  place: Montreal, Canada
+  date: "2025.10"
+
+- file: dsc-2606.jpg
+  width: 2400
+  height: 1600
+  place: Mississauga, Canada
+  date: "2025.11"
+
+- file: dsc-2657.jpg
+  width: 1600
+  height: 1600
+  place: Mississauga, Canada
+  date: "2025.11"
+
+- file: dsc-2901.jpg
+  width: 2400
+  height: 1600
+  place: London, United Kingdom
+  date: "2025.12"
+
+- file: dsc-2975.jpg
+  width: 1600
+  height: 2400
+  place: London, United Kingdom
+  date: "2025.12"
+
+- file: dsc-3121.jpg
+  width: 1600
+  height: 2400
+  place: London, United Kingdom
+  date: "2025.12"
+
+- file: dsc-3923.jpg
+  width: 2400
+  height: 1600
+  place: Dover, United Kingdom
+  date: "2025.12"
+
+- file: dsc-4181.jpg
+  width: 1600
+  height: 2400
+  place: Kingston, United Kingdom
+  date: "2025.12"
+
+- file: dsc-4402.jpg
+  width: 2400
+  height: 1600
+  place: Torquay, United Kingdom
+  date: "2025.12"
+
+- file: dsc-4532.jpg
+  width: 1600
+  height: 2400
+  place: Torquay, United Kingdom
+  date: "2025.12"
+
+- file: dsc-4861.jpg
+  width: 1600
+  height: 2400
+  place:  Manchester, United Kingdom
+  date: "2025.12"
+
+- file: dsc-5347.jpg
+  width: 2400
+  height: 1600
+  place: Edinburgh, United Kingdom
+  date: "2026.01"
+
+- file: dsc-5608.jpg
+  width: 1600
+  height: 2400
+  place: My Window, Canada
+  date: "2026.01"
+
+- file: dsc-5956.jpg
+  width: 2400
+  height: 1600
+  place: Toronto, Canada
+  date: "2026.06"
+
+- file: dsc-6046.jpg
+  width: 1600
+  height: 2400
+  place: Mississauga, Canada
+  date: "2026.07"
+
+- file: dsc-6200.jpg
+  width: 1600
+  height: 2400
+  place: Mississauga, Canada
+  date: "2026.07"
