@@ -101,7 +101,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   transition: opacity .2s;
 }
 .photo:hover figcaption,
-.photo:focus-within figcaption { opacity: 1; }
+.photo:has(a:focus-visible) figcaption { opacity: 1; } /* keyboard focus only, not a leftover mouse click */
 
 .empty { color: var(--muted); padding-bottom: 64px; }
 

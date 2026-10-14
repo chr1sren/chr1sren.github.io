@@ -5,6 +5,7 @@ const box = document.querySelector(".lightbox");
 const image = box.querySelector("img");
 const caption = box.querySelector(".caption");
 let current = 0;
+let openedByKeyboard = false;
 
 function show(i) {
   current = (i + links.length) % links.length;
@@ -25,13 +26,15 @@ function show(i) {
 
 function close() {
   box.hidden = true;
-  links[current].focus();
+  if (openedByKeyboard) links[current].focus(); // let keyboard users carry on from here
+  else document.activeElement.blur(); // a mouse click left focus on a photo; drop it
 }
 
 image.addEventListener("load", () => { image.style.opacity = 1; });
 
 links.forEach((link, i) => link.addEventListener("click", e => {
   e.preventDefault();
+  openedByKeyboard = e.detail === 0; // Enter on a focused link fires a click with no mouse clicks
   show(i);
 }));
 
