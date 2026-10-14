@@ -1,5 +1,5 @@
 ## About
 
-Personal site, built with [Jerkyl](https://jekyllrb.com/) on GitHub Pages.
+Personal site, built with [Jerkyll](https://jekyllrb.com/) on GitHub Pages.
 
-License: MIT
+License: [MIT](./LICENSE)
