@@ -3,14 +3,22 @@
 # - title: Project name
 #   url: https://...                      # optional, makes the title a link
 #   image: /assets/img/projects/x.jpg     # optional, 4:3 thumbnail
+#   video: /assets/projects/x/clip.mp4    # optional, looping thumbnail instead of image
 #   meta: Supervised by [Prof. Name](https://...), Some Lab   # Markdown links work here
 #   duration: April – August 2026
-#   links:                                # optional, shown after meta
+#   links:                                # optional, shown after the title as [name]
 #     - name: code
 #       url: https://github.com/...
-#   description: One or two sentences.
+#   venue: Some Conference 2026, Poster Session · 3rd Prize   # optional, shown in italics under the title
+#   topics: [Topic A, Topic B]            # optional
+#   description: One or two sentences.    # optional, Markdown works
 
 - title: Learning Invariant Representations Using Bisimulation with Actions for Efficient Reinforcement Learning
+  video: /assets/projects/bid2/rollout.mp4
+  links:
+    - name: details
+      url: /projects/bid2/
   meta: Supervised by [Dr. Amey Pore](https://ameyapores.github.io/), MEDCVR Lab
   duration: April – August 2026
-  description: Reinforcement Learning, State Representation Learning
+  venue: Toronto Robotics Conference 2026, Poster Session · 3rd Prize
+  topics: [Reinforcement Learning, State Representation Learning]

@@ -132,3 +132,34 @@
   height: 2400
   place: Mississauga, Canada
   date: "2026.07"
+
+
+- file: dsc-0186.jpg
+  width: 2400
+  height: 1600
+  place: Canmore, Canada
+  date: "2026.10"
+
+- file: dsc-0257.jpg
+  width: 2400
+  height: 1600
+  place: Canmore, Canada
+  date: "2026.10"
+
+- file: dsc-0334.jpg
+  width: 2400
+  height: 1600
+  place: Banff, Canada
+  date: "2026.10"
+
+- file: dsc-0555.jpg
+  width: 2400
+  height: 1600
+  place: Banff, Canada
+  date: "2026.10"
+
+- file: dsc-0575.jpg
+  width: 1598
+  height: 2400
+  place: Banff, Canada
+  date: "2026.10"

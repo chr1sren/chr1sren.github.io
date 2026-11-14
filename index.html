@@ -11,7 +11,6 @@ layout: default
     {% endfor %}
     <ul>
       <li><a href="mailto:{{ site.author.email }}">Email</a></li>
-      <li><a href="https://github.com/{{ site.author.github }}">GitHub</a></li>
       <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a></li>
     </ul>
   </aside>
@@ -48,19 +47,22 @@ layout: default
       <h2>Research Project</h2>
       {% for project in site.data.projects %}
       <article class="project">
-        {% if project.image %}
+        {% if project.video %}
+        <video class="thumb" src="{{ project.video | relative_url }}" autoplay muted loop playsinline></video>
+        {% elsif project.image %}
         <img class="thumb" src="{{ project.image | relative_url }}" alt="" loading="lazy">
         {% else %}
         <div class="thumb"></div>
         {% endif %}
         <div>
-          <h3>{% if project.url %}<a href="{{ project.url }}">{{ project.title }}</a>{% else %}{{ project.title }}{% endif %}</h3>
-          <div class="meta">
-            <em>{{ project.meta | markdownify | remove: '<p>' | remove: '</p>' | strip }}</em>
-            {% for link in project.links %} · <a href="{{ link.url }}">{{ link.name }}</a>{% endfor %}
-          </div>
-          {% if project.duration %}<div class="meta">{{ project.duration }}</div>{% endif %}
-          <p>{{ project.description }}</p>
+          <h3>
+            {% if project.url %}<a href="{{ project.url | relative_url }}">{{ project.title }}</a>{% else %}{{ project.title }}{% endif %}
+            {% for link in project.links %}<a class="link" href="{{ link.url | relative_url }}">[{{ link.name }}]</a>{% endfor %}
+          </h3>
+          {% if project.venue %}<div class="venue">{{ project.venue }}</div>{% endif %}
+          <div class="meta">{{ project.meta | markdownify | remove: '<p>' | remove: '</p>' | strip }}{% if project.duration %} · {{ project.duration }}{% endif %}</div>
+          {% if project.topics %}<div class="topics">{{ project.topics | join: ' · ' }}</div>{% endif %}
+          {% if project.description %}{{ project.description | markdownify }}{% endif %}
         </div>
       </article>
       {% endfor %}
